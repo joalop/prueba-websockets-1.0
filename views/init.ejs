@@ -13,24 +13,31 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <div id="view-chat">
-        <div id="view-message"></div>
-        <div id="view-actions"></div>
-        <div id="view-conf">
-            <label for="user">User Name</label>
-            <input type="text" name="name" id="user" tabindex="1" autofocus>
-            <label for="message">Message</label>
-            <input type="text" name="message" id="message" tabindex="2">
+<a href="/" target="_blank">Add Window Client</a>
+<button onclick="aded()">Add Intern Client</button>
 
-            <button id="send">Sending</button>
+
+
+<div id="container">
+
+    <div class="view-chat">
+        <div class="view-message"></div>
+        <div class="view-actions"></div>
+        <div class="view-conf">
+            <label for="user">User Name</label>
+            <input type="text" name="name" class ="user" tabindex="1" autofocus>
+            <label for="message">Message</label>
+            <input type="text" name="message" class ="message" tabindex="2">
+
+            <button class="send">Sending</button>
         </div>
     </div>
 
-    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
-    <script src="/script/chat.js"></script>
-    <!-- <script> io() </script> -->
-    
+</div>
+
+<script src="/socket.io/socket.io.js" charset="utf-8"></script>
+<script src="/script/chat.js"></script>
+<!-- <script> io() </script> -->
     
 </body>
 </html>

@@ -28,17 +28,27 @@ const server = app.listen( app.get('port'), () => {
     console.log(`Server listen on port: ${app.get('port')}`) }
 );
 
+// 00º websockets conf, the module need a server conection
 const io = socketIO(server);
 
-// websokets
+// websokets " events "
 
+// 01º Websocket listen conections
 io.on('connection', (socket) => {
-    console.log('new conection', socket.id)
+    //console.log('new conection', socket.id)
+
+    // 3º Listen a event
     socket.on('chat:sending', (data) => {
 
         // Now we have two options
-        // send to all users included me
-        io.sockets.emit('chat:sending', data) // this is a event from the server, and we can use the same name
-        // send to all users without me
+        // send message to all users included me
+        io.sockets.emit('chat:sending', data) // this is a server event, and we can use the same name
+
+        // send message to all users without me
+        // socket.broadcast.emit('chat:sending', data)
     })
+
+    socket.on('', () => {
+
+    });
 });
